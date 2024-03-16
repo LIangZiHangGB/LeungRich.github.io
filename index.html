@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://api.tianditu.gov.cn/api?v=4.0&tk=50cba7054a2b7aaf14b67aa5d6eeeec9" type="text/javascript"></script>
+    <script>
+        var map;
+        var zoom = 12;
+        var controlPosition;
+        function onLoad() {
+            map = new T.Map('mapDiv',{projection:'EPSG:4326'});
+            map.centerAndZoom(new T.LngLat(116.40769, 39.89945), zoom);
+            controlPosition= new T.Control.Zoom()
+            controlPosition.setPosition(T_ANCHOR_BOTTOM_RIGHT)
+            map.addControl(controlPosition)
+        }
+    </script>
+</head>
+<body onLoad="onLoad()">
+    <div id="mapDiv" style="position:absolute;width:100%; height:100%"></div>
+    </body>
+</html>
