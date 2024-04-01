@@ -103,8 +103,9 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+  type: git
   repo: https://github.com/LIangZiHangGB/liangzihanggb.github.io
+  branch: main
 
 # Sidebar settings
 sidebar: true  #添加侧边栏
